@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <Authors>Andrea Vincenzo Abbondanza</Authors>
+    <Company>Dew Studio</Company>
+    <Product>Dew Interfaces</Product>
+    <Description>The DewCore interface collection</Description>
+    <PackageProjectUrl>https://github.com/andreabbondanza/DewInterfaces</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/andreabbondanza/DewInterfaces/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageIconUrl>http://andrewdev.eu/wp-content/uploads/2016/08/OnlyLogo.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/andreabbondanza/DewInterfaces</RepositoryUrl>
+    <PackageTags>Interfaces</PackageTags>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
+    <FileVersion>1.0.0.1</FileVersion>
+  </PropertyGroup>
+
+</Project>
