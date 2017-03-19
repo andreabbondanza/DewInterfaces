@@ -1,8 +1,6 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Text;
 using System.Threading.Tasks;
 using System.Data.Common;
 
@@ -13,7 +11,15 @@ namespace DewInterfaces.DewDatabase.MySQL
     /// </summary>
     public interface IMySQLResponse
     {
-        long GetLastInsertedRow();
+        /// <summary>
+        /// Get last inserted row
+        /// </summary>
+        /// <returns></returns>
+        long GetLastInsertedId();
+        /// <summary>
+        /// Get affected rows
+        /// </summary>
+        /// <returns></returns>
         long GetRowsAffected();
     }
     /// <summary>
