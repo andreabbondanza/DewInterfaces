@@ -66,6 +66,31 @@ namespace DewInterfaces.DewDatabase.MySQL
         /// <returns></returns>
         Task<IMySQLResponse> QueryAsync(string query, List<DbParameter> values);
         /// <summary>
+        /// Update a row into the T table.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="toFind">The searched row</param>
+        /// <param name="toUpdate">the row</param>
+        /// <param name="tablePrefix">a table prefix if exists</param>
+        /// <returns></returns>
+        Task<IMySQLResponse> UpdateAsync<T>(T toFind, T toUpdate, string tablePrefix = null) where T : class;
+        /// <summary>
+        /// Delete a row into the T table. Works only with "=" assertions
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="toDelete">The data</param>
+        /// <param name="tablePrefix">a table prefix if exists</param>
+        /// <returns></returns>
+        Task<IMySQLResponse> DeleteAsync<T>(T toDelete, string tablePrefix = null) where T : class;
+        /// <summary>
+        /// Insert a row into the T table
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="newRow">The data</param>
+        /// <param name="tablePrefix">a table prefix if exists</param>
+        /// <returns></returns>
+        Task<IMySQLResponse> InsertAsync<T>(T newRow, string tablePrefix = null) where T : class;
+        /// <summary>
         /// Commit a transaction
         /// </summary>
         Task CommitAsync();
