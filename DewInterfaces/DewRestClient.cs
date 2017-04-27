@@ -151,7 +151,7 @@ namespace DewInterfaces
             /// </summary>
             /// <param name="request">The IRESTRequest object</param>
             /// <returns></returns>
-            Task<IRESTResponse> PerformRequest(IRESTRequest request);
+            Task<IRESTResponse> PerformRequestAsync(IRESTRequest request);
             /// <summary>
             /// Return IRESTResponse object from standard HttpResponseMessage
             /// </summary>
