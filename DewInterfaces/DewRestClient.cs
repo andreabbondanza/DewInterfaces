@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -180,6 +181,16 @@ namespace DewInterfaces
             /// </summary>
             /// <returns></returns>
             HttpResponseMessage GetHttpResponse();
+            /// <summary>
+            /// Return response body as stream
+            /// </summary>
+            /// <returns></returns>
+            Task<Stream> ReadResponseAsStreamAsync();
+            /// <summary>
+            /// Return response body as byte array
+            /// </summary>
+            /// <returns></returns>
+            Task<byte[]> ReadResponseAsByteArrayAsync();
 
         }
         /// <summary>
@@ -187,7 +198,7 @@ namespace DewInterfaces
         /// </summary>
         public interface IRESTRequest
         {
-
+            
             /// <summary>
             /// Add header to the request
             /// </summary>
@@ -209,6 +220,24 @@ namespace DewInterfaces
             /// </summary>
             /// <returns></returns>
             HttpContent GetContent();
+            /// <summary>
+            /// Add a new MultipartFormDataContent to HTTPContent request. Be careful, it overwrite the previous HTTPContent, if it exists and is different for MultipartFormData
+            /// </summary>
+            /// <param name="key"></param>
+            /// <param name="value"></param>
+            void AddMultipartFormDataContent(string key, byte[] value);
+            /// <summary>
+            /// Add a new MultipartFormDataContent to HTTPContent request. Be careful, it overwrite the previous HTTPContent, if it exists and is different for MultipartFormData
+            /// </summary>
+            /// <param name="key"></param>
+            /// <param name="value"></param>
+            void AddMultipartFormDataContent(string key, string value);
+            /// <summary>
+            /// Add a new MultipartFormDataContent to HTTPContent request. Be careful, it overwrite the previous HTTPContent, if it exists and is different for MultipartFormData
+            /// </summary>
+            /// <param name="key"></param>
+            /// <param name="value"></param>
+            void AddMultipartFormDataContent(string key, Stream value);
             /// <summary>
             /// Add a query arg
             /// </summary>
