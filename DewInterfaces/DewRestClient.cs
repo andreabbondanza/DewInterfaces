@@ -72,7 +72,11 @@ namespace DewInterfaces
             /// <summary>
             /// HEAD
             /// </summary>
-            HEAD
+            HEAD,
+            /// <summary>
+            /// DELETE
+            /// </summary>
+            DELETE
         }
 
         /// <summary>
