@@ -12,9 +12,10 @@
     <RepositoryUrl>https://github.com/andreabbondanza/DewInterfaces</RepositoryUrl>
     <PackageTags>Interfaces</PackageTags>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>1.0.6</Version>
-    <AssemblyVersion>1.0.0.6</AssemblyVersion>
-    <FileVersion>1.0.0.6</FileVersion>
+    <Version>1.1.2</Version>
+    <AssemblyVersion>1.1.2.0</AssemblyVersion>
+    <FileVersion>1.1.2.0</FileVersion>
+    <PackageReleaseNotes>Abstracted response types for mysql library</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
