@@ -229,7 +229,8 @@ namespace DewInterfaces
             /// </summary>
             /// <param name="key"></param>
             /// <param name="value"></param>
-            void AddMultipartFormDataContent(string key, byte[] value);
+            /// <param name="fileName"></param>
+            void AddMultipartFormDataContent(string key, byte[] value, string fileName);
             /// <summary>
             /// Add a new MultipartFormDataContent to HTTPContent request. Be careful, it overwrite the previous HTTPContent, if it exists and is different for MultipartFormData
             /// </summary>
@@ -241,7 +242,8 @@ namespace DewInterfaces
             /// </summary>
             /// <param name="key"></param>
             /// <param name="value"></param>
-            void AddMultipartFormDataContent(string key, Stream value);
+            /// <param name="fileName"></param>
+            void AddMultipartFormDataContent(string key, Stream value, string fileName);
             /// <summary>
             /// Add a query arg
             /// </summary>
