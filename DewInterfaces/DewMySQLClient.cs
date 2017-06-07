@@ -97,7 +97,7 @@ namespace DewInterfaces.DewDatabase.MySQL
         /// <summary>
         /// Rollback a transaction
         /// </summary>
-        Task RoolbackAsync();
+        Task RollbackAsync();
         /// <summary>
         /// Begin a transiction
         /// </summary>
