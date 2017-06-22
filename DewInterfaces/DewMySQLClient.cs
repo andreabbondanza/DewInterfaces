@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Threading.Tasks;
 using System.Data.Common;
+using System.Threading.Tasks;
 
 namespace DewInterfaces.DewDatabase.MySQL
 {
@@ -21,6 +21,11 @@ namespace DewInterfaces.DewDatabase.MySQL
         /// </summary>
         /// <returns></returns>
         long GetRowsAffected();
+        /// <summary>
+        /// Get the number of columns
+        /// </summary>
+        /// <returns></returns>
+        int GetFieldCount();
     }
     /// <summary>
     /// MySQLClient dew interface
