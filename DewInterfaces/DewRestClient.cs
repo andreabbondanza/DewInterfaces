@@ -10,6 +10,13 @@ namespace DewInterfaces
     namespace DewRestClient
     {
         /// <summary>
+        /// Abstract class for certificates
+        /// </summary>
+        public abstract class RESTCertificateAbstract
+        {
+
+        }
+        /// <summary>
         /// Http header validation type
         /// </summary>
         public enum HeadersValidation
@@ -202,7 +209,16 @@ namespace DewInterfaces
         /// </summary>
         public interface IRESTRequest
         {
-            
+            /// <summary>
+            /// Set a http message handler
+            /// </summary>
+            /// <param name="handler"></param>
+            void SetHandler(RESTCertificateAbstract handler);
+            /// <summary>
+            /// Return the http message handler
+            /// </summary>
+            /// <returns></returns>
+            HttpClientHandler GetHandler();
             /// <summary>
             /// Add header to the request
             /// </summary>
